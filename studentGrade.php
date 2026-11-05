@@ -41,8 +41,10 @@
         <p>The goal is to display and compute Student grades, average, points and status.</p>
         <p class="rule">Rules: Don't use any array_ built in functionalities. </p>
     </section>
-
+    
     <?php
+    echo "<pre>";
+
     $students = [
         "Tony Stark" => [90, 99, 98, 82],
         "Captain America" => [94, 85, 99, 99],
@@ -151,7 +153,7 @@
     function gradeRemarks(array $students)
     {
         //preserve whitespace
-        echo "<pre>";
+        
 
         $studentCount = 0;
 
