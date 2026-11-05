@@ -27,8 +27,13 @@
         a:hover{
             color: white;
             background-color: #2d2d2d;
-            
-            
+        }
+        .list{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            width: 250px;
         }
     </style>
 </head>
@@ -36,7 +41,12 @@
     <div class="section">
         <div>
             <h1>MENU</h1>
-            <a href="studentGrade.php">Student Grades Report</a>
+            <div class="list">
+                <a href="studentGrade.php">Student Grades Report</a>
+                <a href="ATM.php">ATM MACHINE</a>
+                <a href="MeanMedianMode.php">MeanMedianMode</a>
+            </div>
+            
         </div>
         
     </div>
