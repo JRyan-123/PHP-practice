@@ -108,6 +108,26 @@
             }
             return $mode;
         }
+
+        function BigSmallNumber(array $numbers): array 
+        {
+            $biggest = $numbers[0];
+            $smallest = $numbers[0];
+
+            foreach ($numbers as $n) {
+                if($biggest < $n){
+                    $biggest = $n;
+                }
+                if ($smallest > $n) {
+                    $smallest = $n;
+                }
+            }
+            return [ 
+                "biggest" => $biggest,
+                "smallest" => $smallest
+            ];
+
+        }
         
         echo "Mean:" . formatNum(getMean($numbers));
         echo PHP_EOL;
@@ -116,6 +136,12 @@
         echo "Mode : " . getMode($numbers);
         echo PHP_EOL;
         echo "Order :" .  implode(", ", $numbers);
+        echo PHP_EOL;
+        $statNum = BigSmallNumber($numbers);
+        echo "Biggest number: " . $statNum["biggest"];
+        echo PHP_EOL;
+         echo "Biggest number: " . $statNum["smallest"];
+        echo PHP_EOL;
         
 
         function isItOdd(int $length): bool 
