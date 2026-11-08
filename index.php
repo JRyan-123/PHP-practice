@@ -43,7 +43,7 @@
             <h1>MENU</h1>
             <div class="list">
                 <a href="studentGrade.php">Student Grades Report</a>
-                <a href="ATM.php">ATM MACHINE</a>
+                
                 <a href="MeanMedianMode.php">MeanMedianMode</a>
             </div>
             
