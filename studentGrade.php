@@ -18,30 +18,36 @@
 
         }
 
-        .btn-back {
-            background: #2d2d2d;
-            padding:  10px;
-            color: white;
-            border-radius: 10px;
-            border: 1px solid #2d2d2d;
-            transition: 500ms;
-            text-decoration: none;
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        .btn-back:hover {
-            background: white ;
-            color: #2d2d2d;
-            cursor: pointer;
+
+        .icon {
+            padding: 5px;
+            fill: grey;
+        }
+
+        .link:hover .icon {
+            fill: black;
         }
     </style>
 </head>
 
 <body>
+
     <section class="intro">
-        <h1>Student Grade Report</h1>
+        <div class="title">
+            <a href="index.php" class="link"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" height="20" width="20">
+                    <path class="icon" fill="rgb(0, 0, 0)" d="M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z" />
+                </svg> </a>
+            <h1>Student Grade Report</h1>
+        </div>
         <p>The goal is to display and compute Student grades, average, points and status.</p>
         <p class="rule">Rules: Don't use any array_ built in functionalities. </p>
     </section>
-    
+
     <?php
     echo "<pre>";
 
@@ -88,27 +94,25 @@
         } else {
             $failed++;
         }
-
     }
 
     function getClassTotalAverage(float $average, float &$totalAverage): float
     {
-        return $totalAverage += $average; 
+        return $totalAverage += $average;
     }
 
 
-    function getTopScorer( float $average,  string $name, float &$topScorer, string &$topName): void
-    {   
-        
+    function getTopScorer(float $average,  string $name, float &$topScorer, string &$topName): void
+    {
+
         if ($average > $topScorer) {
             $topScorer = $average;
             $topName = $name;
         }
-
     }
 
-    function getLowScorer( float $average,  string $name, float &$lowScorer, string &$lowName)
-    {    
+    function getLowScorer(float $average,  string $name, float &$lowScorer, string &$lowName)
+    {
         if ($average < $lowScorer) {
             $lowScorer = $average;
             $lowName = $name;
@@ -153,7 +157,7 @@
     function gradeRemarks(array $students)
     {
         //preserve whitespace
-        
+
 
         $studentCount = 0;
 
@@ -161,7 +165,7 @@
         $failed = 0;
 
         $totalAverage = 0;
-    
+
         $topScorer = 0;
         $topName = "";
 
@@ -201,7 +205,7 @@
         }
 
         //honorable mentions
-        
+
         echo str_repeat(PHP_EOL, 2);
         echo "Total Students : " . $studentCount;
         echo PHP_EOL;
@@ -221,10 +225,8 @@
 
     gradeRemarks($students);
     ?>
-    <div>
-        <a href="index.php" class="btn-back"> Back </a>
-    </div>
-    
+
+
 </body>
 
 </html>
