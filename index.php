@@ -45,6 +45,12 @@
                 <a href="studentGrade.php">Student Grades Report</a>
                 
                 <a href="MeanMedianMode.php">MeanMedianMode</a>
+
+                <a href="inventory.php">Inventory</a>
+
+                <a href="palindrome.php">Palindrome</a>
+
+                <a href="reverseString.php">Reverse String</a>
             </div>
             
         </div>
