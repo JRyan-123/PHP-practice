@@ -51,6 +51,10 @@
                 <a href="palindrome.php">Palindrome</a>
 
                 <a href="reverseString.php">Reverse String</a>
+
+                <a href="triangle.php">Triangle</a>
+
+                <a href="sales.php">Sales</a>
             </div>
             
         </div>
